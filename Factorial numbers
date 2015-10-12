@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+long fact (long a)
+{if (a==0)
+{
+  return 1;
+}
+else{
+    return a * fact (a-1);}
+}
+int main (){
+  long a;
+  int b;
+  cout << "Insert non-negative integer number" << endl;
+  cin >>a;
+    if (a >= 0)
+    {
+      cout << "The factorial number is "<< fact (a) << endl;
+    }
+    if (a < 0){
+      cout << "That's a negative number" << endl;
+    }
+  cout << "Want to try another number (yes/no)?" << endl;
+  string d;
+  cin >> d;
+  do
+  {
+    cout << "Insert non-negative number" << endl;
+    cin >>a;
+    cout << "The factorial number is "<< fact (a) << endl;
+    cout << "Want to try another number (yes/no)?";
+    cin >> d;
+  }
+  while(d =="yes");
+  if(d=="no")
+  {
+      cout << "Thank you" << endl;
+  }
+  return 0;
+}
