@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int gre(int a, int b)
+{
+  int c;
+  if (b==0)
+  {
+    return a;
+  }
+  while (b!=0)
+  {
+  c = b;
+  b = a % b;
+  a = c;
+  }
+  {
+    return a;
+  }
+}
+int main()
+{
+  int a, b, c;
+  cout <<"Insert first number"<< endl;
+  cin >>a;
+  cout <<"Insert second number"<< endl;
+  cin >>b;
+  cout <<"The greatest common divisor is "<< gre(a,b)<< endl;
+  return 0;
+}
