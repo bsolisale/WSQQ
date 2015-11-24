@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+float bab(float a)
+{
+  float x = a;
+  float y = 1;
+  float z = 0.000001;
+  while(x - y > z)
+{
+    x = (x + y)/2;
+    y = a/x;
+}
+return x;
+}
+int main ()
+{
+  float a;
+  cout << "Insert number" <<endl;
+  cin >>a;
+  cout << "The square root is "<< bab(a) << endl;
+  return 0;
+}
