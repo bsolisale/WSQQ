@@ -1,0 +1,32 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main ()
+{
+  float array [10];
+  float sum = 0;
+  float av;
+  int a;
+  int x = 0;
+  cout<< "Insert ten numbers"<<endl;
+  for (int a = 0; a < 10; a++)
+  {
+    cout<< "Insert value" <<endl;
+    cin >>array[a];
+  }
+  for (int a = 0; a < 10; a++)
+  {
+    sum = sum + array[a];
+  }
+  av = sum/10;
+  for (int a = 0; a < 10; a++)
+  {
+    x = x + ((array [a] - av) * (array[a] - av));
+  }
+  x = x / 9;
+  x = sqrt(x);
+  cout<<"The sum is " << sum <<endl;
+  cout<<"The average is "<< av <<endl;
+  cout<<"The standard deviation is:" << x << endl;
+  return 0;
+}
